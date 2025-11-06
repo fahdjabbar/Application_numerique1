@@ -1,0 +1,26 @@
+### Liste des comptes
+GET http://localhost:8081/bankAccounts
+
+### Un seul compte (remplace l'id)
+GET http://localhost:8081/bankAccounts/eb6b750c-62a5-4284-ae5c-ed2ae0045744
+
+### Ajouter un compte
+POST http://localhost:8081/bankAccounts
+Content-Type: application/json
+
+{
+  "balance": 5000,
+  "currency": "MAD",
+  "type": "CURRENT_ACCOUNT"
+}
+
+### Mettre à jour un compte
+PUT http://localhost:8081/bankAccounts/eb6b750c-62a5-4284-ae5c-ed2ae0045744
+Content-Type: application/json
+
+{
+  "balance": 7000
+}
+
+### Supprimer un compte
+DELETE http://localhost:8081/bankAccounts/eb6b750c-62a5-4284-ae5c-ed2ae0045744
